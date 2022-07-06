@@ -1,6 +1,6 @@
 import Profile from "assets/images/ProfilePic.svg";
 
-function Home() {
+const Tip = () => {
   return (
     <main>
       <div className="img-container">
@@ -21,6 +21,6 @@ function Home() {
       </div>
     </main>
   );
-}
+};
 
-export default Home;
+export default Tip;
