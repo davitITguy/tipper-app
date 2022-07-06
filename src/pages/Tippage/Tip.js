@@ -9,9 +9,9 @@ const Tip = () => {
         <p>Czech Beer House</p>
       </div>
       <div className="btn-section">
-        <button className="btn btn-light">5$</button>
-        <button className="btn btn-light">10$</button>
-        <button className="btn btn-light">20$</button>
+        <button className="btn btn-light tip-btn">5$</button>
+        <button className="btn btn-light tip-btn">10$</button>
+        <button className="btn btn-light tip-btn">20$</button>
       </div>
       <div className="input-section">
         <form>

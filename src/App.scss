@@ -89,7 +89,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  button {
+  gap: 10px;
+  .tip-btn {
     all: unset;
 
     //set 2 rem only here
@@ -109,11 +110,12 @@ body {
     input {
       all: unset;
     }
-    all: unset;
+
     padding: 1rem;
+
     color: #170738;
     border: 1px solid #eef0f3;
-    width: 100%;
+    width: 90%;
     margin-bottom: 22px;
     border-radius: 16px;
   }
@@ -123,7 +125,7 @@ body {
     color: #fff;
     background-color: #170738;
     border: 1px solid #170738;
-    width: 100%;
+    width: 82%;
     border-radius: 16px;
     text-align: center;
   }
