@@ -1,4 +1,3 @@
-import mobile from "assets/images/Group12201.png";
 import Profile from "assets/images/ProfilePic.svg";
 
 function Home() {
@@ -6,15 +5,18 @@ function Home() {
     <main>
       <div className="img-container">
         <img src={Profile} alt="person" />
-        <p>Giorgi M.</p>
+        <h3>Giorgi M.</h3>
         <p>Czech Beer House</p>
       </div>
-      <div>
+      <div className="btn-section">
         <button className="btn btn-light">5$</button>
         <button className="btn btn-light">10$</button>
         <button className="btn btn-light">20$</button>
       </div>
-      <div>
+      <div className="input-section">
+        <form>
+          <input type="text" placeholder="$0,00" />
+        </form>
         <button className="btn btn-dark">Give Tip</button>
       </div>
     </main>
