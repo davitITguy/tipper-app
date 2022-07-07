@@ -13,7 +13,13 @@ const Home = () => {
       </div>
       <div className="btns">
         <button className="btn btn-dark">
-          <Link to="/tippage">Continue with app</Link>
+          <a href="https://play.google.com/store/games" target="_blank">
+            Continue with app
+          </a>
+
+          {/* <Link to={{ pathname: "https://play.google.com/store/games" }} target="_blank">
+            Continue with app
+          </Link> */}
         </button>
         <button className="btn btn-light">
           <Link to="/TipPage">Continue as guest</Link>
