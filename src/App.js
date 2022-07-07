@@ -1,7 +1,7 @@
 import "./App.scss";
 import Home from "./pages/Home";
 import { Routes, Route } from "react-router-dom";
-import Tip from "./pages/Tippage/Tip";
+import Tip from "./pages/Tip/Tip";
 import SuccessModal from "components/modals/SuccessModal";
 import FailModal from "components/modals/FailModal";
 import { useState } from "react";
@@ -12,12 +12,12 @@ const App = () => {
 
   return (
     <div>
-      {modal && <Modal type={"fail"} closeHandler={() => setModal(false)} />}
+      {modal && <Modal type={"success"} closeHandler={() => setModal(false)} />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tippage" element={<Tip />} />
-        {/* <Route path="/success" element={<SuccessModal />} />
-        <Route path="/fail" element={<FailModal />} /> */}
+        <Route path="/success" element={<SuccessModal />} />
+        <Route path="/fail" element={<FailModal />} />
       </Routes>
     </div>
   );

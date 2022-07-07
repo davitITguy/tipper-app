@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import TipPage from "./pages/Tippage/Tip";
+import TipPage from "./pages/Tip/Tip";
 import App from "./App";
 import Home from "pages/Home";
 
