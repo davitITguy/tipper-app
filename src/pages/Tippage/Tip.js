@@ -16,7 +16,10 @@ const Tip = () => {
       <div className="input-section">
         <form>
           <label>Custom Amount</label>
-          <input type="text" name="ammount" placeholder="$0,00" />
+          <span>
+            $ &nbsp;
+            <input type="number" name="ammount" placeholder="0.00" min="0" />
+          </span>
         </form>
         <button className="btn btn-dark">Give Tip</button>
       </div>

@@ -28,26 +28,24 @@ body {
       .fail {
         width: 270px;
         background-color: white;
-        padding: 10px;
+        padding: 16px;
         border-radius: 10px;
         box-shadow: 0px 3px 36px 0px rgba(0, 0, 0, 0.36);
         -webkit-box-shadow: 0px 3px 36px 0px rgba(0, 0, 0, 0.36);
         -moz-box-shadow: 0px 3px 36px 0px rgba(0, 0, 0, 0.36);
         svg {
-          margin-top: 16px;
           color: red;
         }
       }
       .success {
         width: 270px;
         background-color: white;
-        padding: 10px;
+        padding: 16px;
         border-radius: 10px;
         box-shadow: 0px 3px 36px 0px rgba(0, 0, 0, 0.36);
         -webkit-box-shadow: 0px 3px 36px 0px rgba(0, 0, 0, 0.36);
         -moz-box-shadow: 0px 3px 36px 0px rgba(0, 0, 0, 0.36);
         svg {
-          margin-top: 16px;
           border: 1px solid green;
           color: white;
           background-color: green;
@@ -142,9 +140,9 @@ body {
 
   .tip-btn {
     all: unset;
-    box-shadow: 10px 10px 49px 0px rgba(0, 0, 45, 0.25);
-    -webkit-box-shadow: 10px 10px 49px 0px rgba(0, 0, 45, 0.25);
-    -moz-box-shadow: 10px 10px 49px 0px rgba(0, 0, 45, 0.25);
+    box-shadow: 0px 0px 25px #00000012;
+    -webkit-box-shadow: 0px 0px 25px #00000012;
+    -moz-box-shadow: 0px 0px 25px #00000012;
     padding: 1rem 1.5rem;
     color: #170738;
     border: 1px solid #eef0f3;
@@ -170,7 +168,7 @@ body {
     justify-content: center;
     flex-direction: column;
     label {
-      font-size: 13px;
+      font-size: 11px;
       margin-bottom: 5px;
       color: #8a8a8e;
     }

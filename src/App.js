@@ -8,16 +8,16 @@ import { useState } from "react";
 import Modal from "components/modals/Modal";
 
 const App = () => {
-  const [modal, setModal] = useState(false);
+  const [modal, setModal] = useState(true);
 
   return (
     <div>
-      {modal && <Modal type={"fail"} />}
+      {modal && <Modal type={"fail"} closeHandler={() => setModal(false)} />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tippage" element={<Tip />} />
-        <Route path="/success" element={<SuccessModal />} />
-        <Route path="/fail" element={<FailModal />} />
+        {/* <Route path="/success" element={<SuccessModal />} />
+        <Route path="/fail" element={<FailModal />} /> */}
       </Routes>
     </div>
   );
