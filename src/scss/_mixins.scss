@@ -1,5 +1,56 @@
-@mixin flex-center($space) {
+@import "./variables";
+
+@mixin flex-center($jSpace, $aSpace) {
   display: flex;
-  justify-content: $space;
-  align-items: center;
+  justify-content: $jSpace;
+  align-items: $aSpace;
+}
+@mixin wh-size($wSpace, $hSpace) {
+  width: $wSpace;
+  height: $hSpace;
+}
+@mixin modal-styles {
+  width: $w270;
+  background-color: $plain-color-white;
+  padding: $p16;
+  border-radius: $br;
+  box-shadow: $box-shadow-black-36;
+  -webkit-box-shadow: $box-shadow-black-36;
+  -moz-box-shadow: $box-shadow-black-36;
+}
+@mixin text-styles($mtVal, $cVal, $taProp, $fsVal) {
+  margin-top: $mtVal;
+  color: $cVal;
+  text-align: $taProp;
+  font-size: $fsVal;
+}
+@mixin text-styles-v2($mtVal, $mbVal, $fsVal, $fwVal) {
+  margin-top: $mtVal;
+  margin-bottom: $mbVal;
+  font-size: $fsVal;
+  font-weight: $fwVal;
+}
+@mixin text-styles-v3($fsVal, $mbVal, $isVal, $owVal) {
+  font-size: $fsVal;
+  margin-bottom: $mbVal;
+  //styles p tag as it's in design
+  inline-size: $isVal;
+  overflow-wrap: $owVal;
+}
+@mixin btn-style($all, $fwVal, $color, $mbVal) {
+  all: $all;
+  font-weight: $fwVal;
+  color: $color;
+  margin-bottom: $mbVal;
+}
+@mixin modal-content-style {
+  h2 {
+    @include text-styles-v2(14px, 2px, 17px, 600);
+  }
+  p {
+    @include text-styles-v3(13px, 16px, 200px, break-word);
+  }
+  button {
+    @include btn-style(unset, 600, $modal-btn-color, 9px);
+  }
 }

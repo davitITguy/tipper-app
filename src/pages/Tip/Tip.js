@@ -31,7 +31,7 @@ const Tip = () => {
     <main>
       <div className="img-container">
         <img src={data?.profilePicture} alt="person" width="100" height="100" />
-        <h3>{data?.fullName}</h3>
+        <h2>{data?.fullName}</h2>
         <p>{data?.workplace}</p>
       </div>
       <div className="btn-section">
