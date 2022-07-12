@@ -1,18 +1,18 @@
 import "./App.scss";
 import Home from "./pages/Home";
 import { Routes, Route } from "react-router-dom";
-import Tip from "./pages/Tip/Tip";
+import Tip from "./pages/Tip";
 import SuccessModal from "components/modals/SuccessModal";
 import FailModal from "components/modals/FailModal";
 import { useState } from "react";
 import Modal from "components/modals/Modal";
 
 const App = () => {
-  const [modal, setModal] = useState(true);
+  const [modal, setModal] = useState(false);
 
   return (
     <div>
-      {modal && <Modal type={"success"} closeHandler={() => setModal(false)} />}
+      {modal && <Modal type={"fail"} closeHandler={() => setModal(false)} />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tippage" element={<Tip />} />

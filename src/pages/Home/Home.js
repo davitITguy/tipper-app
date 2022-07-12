@@ -13,7 +13,7 @@ const Home = () => {
       </div>
       <div className="btns">
         <button className="btn btn-dark">
-          <a href="https://play.google.com/store/games" target="_blank">
+          <a href="https://sweeftdigital.page.link/6SuK" target="_blank">
             Continue with app
           </a>
 
