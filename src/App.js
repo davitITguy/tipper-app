@@ -8,7 +8,7 @@ import { useState } from "react";
 import Modal from "components/modals/Modal";
 
 const App = () => {
-  const [modal, setModal] = useState(true);
+  const [modal, setModal] = useState(false);
 
   return (
     <div>
