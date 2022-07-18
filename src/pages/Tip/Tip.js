@@ -1,14 +1,16 @@
 import Profile from "assets/images/ProfilePic.svg";
 import { useEffect, useRef, useState } from "react";
+import axios from "axios";
 
 const Tip = () => {
   const [data, setData] = useState({
     fullName: "Giorgi M.",
     workplace: "Czech Beer House",
     profilePicture:
-      "https://play-lh.googleusercontent.com/I-Yd5tJnxw7Ks8FUhUiFr8I4kohd9phv5sRFHG_-nSX9AAD6Rcy570NBZVFJBKpepmc",
+      "https://as1.ftcdn.net/v2/jpg/02/18/96/20/1000_F_218962089_yhRnVKTr3q4Dzvi0Pe2nbXxmB5CYW2GK.jpg",
   });
 
+  const baseURL = "tipping-dev-317246953.eu-central-1.elb.amazonaws.com:8080/";
   const [val, setVal] = useState(0);
 
   const changeHandler = e => {
@@ -18,9 +20,10 @@ const Tip = () => {
   const ammount = useRef(0);
 
   const getData = () => {
-    // axios.get("/").then(resp => {
-    //   setData(resp);
-    // });
+    axios.get(`${baseURL}api/user/info`).then(resp => {
+      setData(resp);
+      console.log(resp);
+    });
   };
 
   useEffect(() => {
@@ -54,26 +57,11 @@ const Tip = () => {
           <input type="hidden" name="description" defaultValue="Nike Steam II" />
           <input type="hidden" name="customdata" defaultValue="some data" />
           <input type="hidden" name="lng" defaultValue="KA" />
-          <input
-            type="hidden"
-            name="successurl"
-            defaultValue="www.google.https://www.google.com/search?q=endeavor&sxsrf=ALiCzsZm8MbaQEA4pQGpobFScvlSxdSaDw%3A1657524723773&source=hp&ei=89HLYrSVLPiIxc8PwMakmAY&iflsig=AJiK0e8AAAAAYsvgA47AfsN8QRvt8gu_jLuemg-aO6pQ&ved=0ahUKEwj02vTiqPD4AhV4RPEDHUAjCWMQ4dUDCAc&uact=5&oq=endeavor&gs_lcp=Cgdnd3Mtd2l6EAMyBAgAEEMyBAgAEEMyBAgAEEMyBQgAEIAEMgUIABCABDILCC4QgAQQxwEQ0QMyBQgAEIAEMgQIABBDMgUIABCABDIFCAAQgAQ6BwgjEOoCECc6BAgjECc6CgguEMcBENEDEEM6EQguEIAEELEDEIMBEMcBENEDOggIABCxAxCDAToLCAAQgAQQsQMQgwE6CggAELEDEIMBEEM6CwguEIAEELEDENQCOgQILhBDOgcIABDJAxBDOgUIABCSAzoUCC4QgAQQsQMQgwEQxwEQrwEQ1AI6CAguEIAEENQCOgcILhDUAhBDOgUILhCABFCyDFi9EmDFE2gBcAB4AIABnwGIAeAHkgEDMC43mAEAoAEBsAEK&sclient=gws-wiz"
-          />
-          <input
-            type="hidden"
-            name="successurl"
-            defaultValue="https://www.google.com/search?q=endeavor&sxsrf=ALiCzsZm8MbaQEA4pQGpobFScvlSxdSaDw%3A1657524723773&source=hp&ei=89HLYrSVLPiIxc8PwMakmAY&iflsig=AJiK0e8AAAAAYsvgA47AfsN8QRvt8gu_jLuemg-aO6pQ&ved=0ahUKEwj02vTiqPD4AhV4RPEDHUAjCWMQ4dUDCAc&uact=5&oq=endeavor&gs_lcp=Cgdnd3Mtd2l6EAMyBAgAEEMyBAgAEEMyBAgAEEMyBQgAEIAEMgUIABCABDILCC4QgAQQxwEQ0QMyBQgAEIAEMgQIABBDMgUIABCABDIFCAAQgAQ6BwgjEOoCECc6BAgjECc6CgguEMcBENEDEEM6EQguEIAEELEDEIMBEMcBENEDOggIABCxAxCDAToLCAAQgAQQsQMQgwE6CggAELEDEIMBEEM6CwguEIAEELEDENQCOgQILhBDOgcIABDJAxBDOgUIABCSAzoUCC4QgAQQsQMQgwEQxwEQrwEQ1AI6CAguEIAEENQCOgcILhDUAhBDOgUILhCABFCyDFi9EmDFE2gBcAB4AIABnwGIAeAHkgEDMC43mAEAoAEBsAEK&sclient=gws-wiz"
-          />
-          <input
-            type="hidden"
-            name="cancelurl"
-            defaultValue="https://www.google.com/search?q=endeavor&sxsrf=ALiCzsZm8MbaQEA4pQGpobFScvlSxdSaDw%3A1657524723773&source=hp&ei=89HLYrSVLPiIxc8PwMakmAY&iflsig=AJiK0e8AAAAAYsvgA47AfsN8QRvt8gu_jLuemg-aO6pQ&ved=0ahUKEwj02vTiqPD4AhV4RPEDHUAjCWMQ4dUDCAc&uact=5&oq=endeavor&gs_lcp=Cgdnd3Mtd2l6EAMyBAgAEEMyBAgAEEMyBAgAEEMyBQgAEIAEMgUIABCABDILCC4QgAQQxwEQ0QMyBQgAEIAEMgQIABBDMgUIABCABDIFCAAQgAQ6BwgjEOoCECc6BAgjECc6CgguEMcBENEDEEM6EQguEIAEELEDEIMBEMcBENEDOggIABCxAxCDAToLCAAQgAQQsQMQgwE6CggAELEDEIMBEEM6CwguEIAEELEDENQCOgQILhBDOgcIABDJAxBDOgUIABCSAzoUCC4QgAQQsQMQgwEQxwEQrwEQ1AI6CAguEIAEENQCOgcILhDUAhBDOgUILhCABFCyDFi9EmDFE2gBcAB4AIABnwGIAeAHkgEDMC43mAEAoAEBsAEK&sclient=gws-wiz"
-          />
-          <input
-            type="hidden"
-            name="callbackurl"
-            defaultValue="https://www.google.com/search?q=endeavor&sxsrf=ALiCzsZm8MbaQEA4pQGpobFScvlSxdSaDw%3A1657524723773&source=hp&ei=89HLYrSVLPiIxc8PwMakmAY&iflsig=AJiK0e8AAAAAYsvgA47AfsN8QRvt8gu_jLuemg-aO6pQ&ved=0ahUKEwj02vTiqPD4AhV4RPEDHUAjCWMQ4dUDCAc&uact=5&oq=endeavor&gs_lcp=Cgdnd3Mtd2l6EAMyBAgAEEMyBAgAEEMyBAgAEEMyBQgAEIAEMgUIABCABDILCC4QgAQQxwEQ0QMyBQgAEIAEMgQIABBDMgUIABCABDIFCAAQgAQ6BwgjEOoCECc6BAgjECc6CgguEMcBENEDEEM6EQguEIAEELEDEIMBEMcBENEDOggIABCxAxCDAToLCAAQgAQQsQMQgwE6CggAELEDEIMBEEM6CwguEIAEELEDENQCOgQILhBDOgcIABDJAxBDOgUIABCSAzoUCC4QgAQQsQMQgwEQxwEQrwEQ1AI6CAguEIAEENQCOgcILhDUAhBDOgUILhCABFCyDFi9EmDFE2gBcAB4AIABnwGIAeAHkgEDMC43mAEAoAEBsAEK&sclient=gws-wiz"
-          />
+
+          <input type="hidden" name="successurl" defaultValue="http://tipper.spandera.tech/" />
+          <input type="hidden" name="errorurl" defaultValue="http://tipper.spandera.tech/" />
+          <input type="hidden" name="cancelurl" defaultValue="http://tipper.spandera.tech/" />
+          <input type="hidden" name="callbackurl" defaultValue="http://tipper.spandera.tech/" />
 
           <label>Custom Amount</label>
 
